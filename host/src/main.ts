@@ -1,8 +1,9 @@
 import { initFederation } from '@angular-architects/native-federation';
+import { remotes } from './remotes';
 
 initFederation({
-  'mfe1': 'http://localhost:3000/remoteEntry.json'
+  [remotes['remote-ng-17'].name]: remotes['remote-ng-17'].manifestUri,
 })
-  .catch(err => console.error(err))
-  .then(_ => import('./bootstrap'))
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err))
+  .then((_) => import('./bootstrap'))
+  .catch((err) => console.error(err));
