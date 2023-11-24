@@ -9,7 +9,12 @@
 
 ## Get started
 
+### Install dependencies of all Angular Applications
+
 ```bash
-# Install dependencies of all Angular Applications
-pnpm-install.cmd
+# Windows
+pnpm-install-all.cmd
+
+# Linux/Unix
+./pnpm-install-all.sh
 ```
