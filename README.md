@@ -19,6 +19,29 @@ pnpm-install-all.cmd
 ./pnpm-install-all.sh
 ```
 
+### Start Frond-Ends
+
+#### Host
+
+```bash
+cd host
+pnpm start # localhost:4200
+```
+
+#### Angular 16
+
+```bash
+cd ng-remote-16
+pnpm start # localhost:4216
+```
+
+#### Angular 17
+
+```bash
+cd ng-remote-17
+pnpm start # localhost:4217
+```
+
 ## Showcase
 
 - [ ] Angular 17 Host integrates Angular 17 Remote
