@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { remotes } from '../remotes';
 import { Angular16Logo } from './logos/angular-16.logo';
@@ -43,7 +43,7 @@ import { Angular17Logo } from './logos/angular-17.logo';
           </li>
           <li class="-mb-px mr-1">
             <a
-              [routerLink]="['posts']"
+              [routerLink]="['/posts']"
               class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold"
               [routerLinkActive]="[
                 'border-l',
@@ -59,7 +59,7 @@ import { Angular17Logo } from './logos/angular-17.logo';
           </li>
           <li class="-mb-px mr-1">
             <a
-              [routerLink]="['posts', 1]"
+              [routerLink]="['/posts', 1]"
               class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold"
               [routerLinkActive]="[
                 'border-l',
@@ -82,4 +82,8 @@ import { Angular17Logo } from './logos/angular-17.logo';
 })
 export class AppComponent {
   protected readonly remoteNg17 = remotes['remote-ng-17'];
+
+  constructor() {
+    globalThis.ngZone = inject(NgZone);
+  }
 }

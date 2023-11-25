@@ -12,7 +12,9 @@ import { PostsService } from './posts.service';
     <ul class="list-disc list-inside">
       @for(post of posts$ | async; track post.id) {
       <li>
-        <a [routerLink]="[post.id]" class="hover:underline">{{ post.title }}</a>
+        <a [routerLink]="['/posts', post.id]" class="hover:underline">{{
+          post.title
+        }}</a>
       </li>
       } @empty {
       <li>No posts found.</li>
