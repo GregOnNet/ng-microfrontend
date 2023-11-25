@@ -17,6 +17,9 @@ dependencies:
   '@angular/core':
     specifier: ^17.0.0
     version: 17.0.4(rxjs@7.8.1)(zone.js@0.14.2)
+  '@angular/elements':
+    specifier: ^17.0.4
+    version: 17.0.4(@angular/core@17.0.4)(rxjs@7.8.1)
   '@angular/forms':
     specifier: ^17.0.0
     version: 17.0.4(@angular/common@17.0.4)(@angular/core@17.0.4)(@angular/platform-browser@17.0.4)(rxjs@7.8.1)
@@ -362,6 +365,18 @@ packages:
       rxjs: 7.8.1
       tslib: 2.6.2
       zone.js: 0.14.2
+
+  /@angular/elements@17.0.4(@angular/core@17.0.4)(rxjs@7.8.1):
+    resolution: {integrity: sha512-aHkIMFF19IZ5c1AyTxsZr4P3cbEIQUkKTCqa3cY699xhEYqAERUE+L7DGRgi7P2ltCwDTU8LDo6Pt8NuB8aECA==}
+    engines: {node: ^18.13.0 || >=20.9.0}
+    peerDependencies:
+      '@angular/core': 17.0.4
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/core': 17.0.4(rxjs@7.8.1)(zone.js@0.14.2)
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
 
   /@angular/forms@17.0.4(@angular/common@17.0.4)(@angular/core@17.0.4)(@angular/platform-browser@17.0.4)(rxjs@7.8.1):
     resolution: {integrity: sha512-R5J87dfJNWwi5SESD7tRkZnqG4u8KNAT4vImX4oG70/6vWioKUSWpLoSp1gpzy9UW51E85AKb8DNvIex7LclSg==}
