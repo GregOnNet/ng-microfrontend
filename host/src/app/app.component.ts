@@ -43,7 +43,7 @@ import { Angular17Logo } from './logos/angular-17.logo';
           </li>
           <li class="-mb-px mr-1">
             <a
-              [routerLink]="[remoteNg17.name]"
+              [routerLink]="['posts']"
               class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold"
               [routerLinkActive]="[
                 'border-l',
@@ -59,7 +59,7 @@ import { Angular17Logo } from './logos/angular-17.logo';
           </li>
           <li class="-mb-px mr-1">
             <a
-              [routerLink]="[remoteNg17.name, 1]"
+              [routerLink]="['posts', 1]"
               class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold"
               [routerLinkActive]="[
                 'border-l',
@@ -81,5 +81,5 @@ import { Angular17Logo } from './logos/angular-17.logo';
   `,
 })
 export class AppComponent {
-  remoteNg17 = remotes['remote-ng-17'];
+  protected readonly remoteNg17 = remotes['remote-ng-17'];
 }

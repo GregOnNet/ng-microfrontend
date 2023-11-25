@@ -7,7 +7,7 @@ module.exports = withNativeFederation({
   name: "remote-ng-17",
 
   exposes: {
-    "./routes": "./src/app/routes.ts",
+    "./bootstrapper": "./src/bootstrap.ts",
   },
 
   shared: {
