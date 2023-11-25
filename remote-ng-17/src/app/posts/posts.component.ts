@@ -1,16 +1,19 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { PostsService } from './posts.service';
 
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, RouterLink],
   template: `
-    <h2>Posts</h2>
-    <ul>
+    <h2 class="text-xl font-medium mb-4">Post Titles</h2>
+    <ul class="list-disc list-inside">
       @for(post of posts$ | async; track post.id) {
-      <li>{{ post.title }}</li>
+      <li>
+        <a [routerLink]="[post.id]" class="hover:underline">{{ post.title }}</a>
+      </li>
       } @empty {
       <li>No posts found.</li>
       }

@@ -1,13 +1,10 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-host',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './host.component.html',
-  styleUrl: './host.component.css'
+  template: ` <p>This is the Host Application</p> `,
 })
-export class HostComponent {
-
-}
+export class HostComponent {}
