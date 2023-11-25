@@ -3,7 +3,7 @@ import { Injectable, inject } from '@angular/core';
 import { map } from 'rxjs';
 import { Post as PostDto } from './post.dto';
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class PostsService {
   readonly #http = inject(HttpClient);
 
