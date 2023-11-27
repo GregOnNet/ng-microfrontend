@@ -7,6 +7,6 @@ export const remotes = {
   'remote-ng-16': {
     name: 'remote-ng-16',
     manifestUri: 'http://localhost:4216/remoteEntry.json',
-    exposedRoutes: './routes',
+    exposedModule: './bootstrapper',
   },
 } as const;

@@ -7,26 +7,23 @@ import {
   inject,
 } from '@angular/core';
 
-export interface RemoteConfiguration {
+export interface RemoteFrameConfiguration {
   remoteName: string;
   exposedModule: string;
   elementName: string;
 }
 
-export const initWrapperConfig: RemoteConfiguration = {
+export const remoteFrameDefaults: RemoteFrameConfiguration = {
   remoteName: '',
   exposedModule: '',
   elementName: '',
 };
 
-@Component({
-  selector: 'host-remote-bootstrapper',
-  template: '',
-})
-export class RemoteBootstrapperComponent implements OnInit {
+@Component({ template: '' })
+export class RemoteFrame implements OnInit {
   readonly #elementRef = inject(ElementRef);
 
-  @RouteInput() config = initWrapperConfig;
+  @RouteInput() config = remoteFrameDefaults;
 
   async ngOnInit() {
     const { exposedModule, remoteName, elementName } = this.config;
