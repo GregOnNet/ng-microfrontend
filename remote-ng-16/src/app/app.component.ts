@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { connectRouter } from './connect-router';
+import { useRouterConnector } from './use-router-connector';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,10 @@ import { connectRouter } from './connect-router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  constructor() {
-    connectRouter();
+export class AppComponent implements OnInit {
+  readonly #routerConnector = useRouterConnector();
+
+  async ngOnInit(): Promise<void> {
+    await this.#routerConnector.connect();
   }
 }
