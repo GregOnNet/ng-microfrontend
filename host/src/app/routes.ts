@@ -27,10 +27,11 @@ export const routes: Routes = [
     matcher: routeStartWith('star-wars'),
     component: RemoteFrame,
     data: {
-       config: <RemoteFrameConfiguration>{
+      config: <RemoteFrameConfiguration>{
         remoteName: remotes['remote-ng-16'].name,
         exposedModule: remotes['remote-ng-16'].exposedModule,
         elementName: 'ng16-root',
       },
-    }
+    },
+  },
 ];
