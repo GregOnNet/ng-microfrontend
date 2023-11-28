@@ -13,17 +13,6 @@ export const routes: Routes = [
     component: HostComponent,
   },
   {
-    matcher: routeStartWith('posts'),
-    component: RemoteFrame,
-    data: {
-      config: <RemoteFrameConfiguration>{
-        remoteName: remotes['remote-ng-17'].name,
-        exposedModule: remotes['remote-ng-17'].exposedModule,
-        elementName: 'ng17-root',
-      },
-    },
-  },
-  {
     matcher: routeStartWith('star-wars'),
     component: RemoteFrame,
     data: {
@@ -31,6 +20,17 @@ export const routes: Routes = [
         remoteName: remotes['remote-ng-16'].name,
         exposedModule: remotes['remote-ng-16'].exposedModule,
         elementName: 'ng16-root',
+      },
+    },
+  },
+  {
+    matcher: routeStartWith('posts'),
+    component: RemoteFrame,
+    data: {
+      config: <RemoteFrameConfiguration>{
+        remoteName: remotes['remote-ng-17'].name,
+        exposedModule: remotes['remote-ng-17'].exposedModule,
+        elementName: 'ng17-root',
       },
     },
   },
