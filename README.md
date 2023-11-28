@@ -45,6 +45,6 @@ pnpm start # localhost:4217
 ## Showcase
 
 - [x] Angular 17 Host integrates Angular 17 Remote
-- [ ] Angular 17 Host integrates Angular 16 Remote
+- [x] Angular 17 Host integrates Angular 16 Remote
 - [ ] Angular 17 Host shares Service with Angular 17 Remote
 - [ ] Angular 17 Host shares Service with Angular 16 Remote
