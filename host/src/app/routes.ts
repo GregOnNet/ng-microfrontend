@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { remotes } from '../remotes';
 import { HostComponent } from './host/host.component';
 import {
-  RemoteFrame,
+  RemoteFrameComponent,
   RemoteFrameConfiguration,
 } from './remote-frame.component';
 import { routeStartWith } from './route-starts-with.guard';
@@ -14,7 +14,7 @@ export const routes: Routes = [
   },
   {
     matcher: routeStartWith('star-wars'),
-    component: RemoteFrame,
+    component: RemoteFrameComponent,
     data: {
       config: <RemoteFrameConfiguration>{
         remoteName: remotes['remote-ng-16'].name,
@@ -25,11 +25,12 @@ export const routes: Routes = [
   },
   {
     matcher: routeStartWith('posts'),
-    component: RemoteFrame,
+    component: RemoteFrameComponent,
     data: {
       config: <RemoteFrameConfiguration>{
         remoteName: remotes['remote-ng-17'].name,
         exposedModule: remotes['remote-ng-17'].exposedModule,
+        exposedCss: remotes['remote-ng-17'].exposedCss,
         elementName: 'ng17-root',
       },
     },
