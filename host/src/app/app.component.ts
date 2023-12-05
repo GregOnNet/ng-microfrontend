@@ -80,6 +80,22 @@ import { Angular17Logo } from './logos/angular-17.logo';
               <app-angular-17-logo /> Post (Id: 1)</a
             >
           </li>
+          <li class="-mb-px mr-1">
+            <a
+              [routerLink]="['/posts', 'german-now']"
+              class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold"
+              [routerLinkActive]="[
+                'border-l',
+                'border-t',
+                'border-r',
+                'rounded-t',
+                'text-blue-700'
+              ]"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <app-angular-17-logo /> German Locale</a
+            >
+          </li>
         </ul>
       </nav>
 
