@@ -1,11 +1,11 @@
-import { ApplicationConfig, NgZone } from '@angular/core';
+import { ApplicationConfig, LOCALE_ID, NgZone } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './routes';
 
 import { registerLocaleData } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
-import localeDe from '@angular/common/locales/de';
+import localeDe from './i18n/angular/de-de';
 
 registerLocaleData(localeDe, 'de-DE');
 
@@ -15,5 +15,6 @@ export const appConfig: ApplicationConfig = {
     globalThis.ngZone ? { provide: NgZone, useValue: globalThis.ngZone } : [],
     provideRouter(routes),
     provideHttpClient(),
+    { provide: LOCALE_ID, useValue: 'de-DE' },
   ],
 };
