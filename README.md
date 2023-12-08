@@ -47,6 +47,7 @@ pnpm start # localhost:4217
 - [x] Angular 17 Host integrates Angular 17 Remote
 - [x] Angular 17 Host integrates Angular 16 Remote
 - [x] Angular 17 Host loads exposed CSS from Angular 17 Remote
+- [x] Deep-Linking from Host to Remote works
 - [ ] Angular 17 Host shares Service with Angular 17 Remote
 - [ ] Angular 17 Host shares Service with Angular 16 Remote
 
