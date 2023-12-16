@@ -11,8 +11,6 @@ import {
   inject,
 } from '@angular/core';
 
-import { MicroFrontendService } from 'micro-frontend';
-
 export interface RemoteFrameConfiguration {
   remoteName: string;
   exposedModule: string;
@@ -31,15 +29,11 @@ export class RemoteFrameComponent implements OnInit, OnDestroy {
   readonly #elementRef = inject(ElementRef);
   readonly #renderer = inject(Renderer2);
 
-  readonly #lib = inject(MicroFrontendService);
-
   #linkElementWithRemoteCss: HTMLLinkElement | null = null;
 
   @RouteInput() config = remoteFrameDefaults;
 
   constructor() {
-    console.log(this.#lib);
-
     afterNextRender(() => this.#createLinkElement(this.config.exposedCss), {
       phase: AfterRenderPhase.Write,
     });

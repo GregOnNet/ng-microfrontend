@@ -1,4 +1,4 @@
-import { Component, NgZone, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { remotes } from '../remotes';
 import { Angular16Logo } from './logos/angular-16.logo';
@@ -105,8 +105,4 @@ import { Angular17Logo } from './logos/angular-17.logo';
 })
 export class AppComponent {
   protected readonly remoteNg17 = remotes['remote-ng-17'];
-
-  constructor() {
-    globalThis.ngZone = inject(NgZone);
-  }
 }
