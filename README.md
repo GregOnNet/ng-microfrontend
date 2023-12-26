@@ -9,14 +9,10 @@
 
 ## Get started
 
-### Install dependencies of all Angular Applications
+### Install workspace dependencies
 
 ```bash
-# Windows
-pnpm-install-all.cmd
-
-# Linux/Unix
-./pnpm-install-all.sh
+pnpm install
 ```
 
 ### Start Frond-Ends
