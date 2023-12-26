@@ -30,7 +30,6 @@ export const routes: Routes = [
       config: <RemoteFrameConfiguration>{
         remoteName: remotes['remote-ng-17'].name,
         exposedModule: remotes['remote-ng-17'].exposedModule,
-        exposedCss: remotes['remote-ng-17'].exposedCss,
         elementName: 'ng17-root',
       },
     },

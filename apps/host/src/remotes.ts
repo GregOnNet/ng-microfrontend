@@ -8,6 +8,5 @@ export const remotes = {
     name: 'remote-ng-17',
     manifestUri: 'http://localhost:4217/remoteEntry.json',
     exposedModule: './bootstrapper',
-    exposedCss: 'http://localhost:4217/assets/styles.css',
   },
 } as const;
