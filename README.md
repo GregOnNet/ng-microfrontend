@@ -17,26 +17,9 @@ pnpm install
 
 ### Start Frond-Ends
 
-#### Host
-
-```bash
-cd host
-pnpm start # localhost:4200
-```
-
-#### Angular 16
-
-```bash
-cd ng-remote-16
-pnpm start # localhost:4216
-```
-
-#### Angular 17
-
-```bash
-cd ng-remote-17
-pnpm start # localhost:4217
-```
+| Scope             | Command                                               |
+| ----------------- | ----------------------------------------------------- |
+| Host & Angular 17 | `pnpm --filter !libs --filter !remote-ng-16 -r start` |
 
 ## Showcase
 
