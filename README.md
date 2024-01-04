@@ -17,9 +17,10 @@ pnpm install
 
 ### Start Frond-Ends
 
-| Scope             | Command                                               |
-| ----------------- | ----------------------------------------------------- |
-| Host & Angular 17 | `pnpm --filter !libs --filter !remote-ng-16 -r start` |
+| Scope                  | Command                                               | Status |
+| ---------------------- | ----------------------------------------------------- | ------ |
+| Host & Angular 17      | `pnpm --filter !libs --filter !remote-ng-16 -r start` | ✅     |
+| Host & Angular 16 & 17 | `pnpm --filter !libs -r start`                        | ❌     |
 
 ## Showcase
 
