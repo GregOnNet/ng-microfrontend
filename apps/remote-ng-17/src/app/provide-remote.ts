@@ -1,7 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { APP_INITIALIZER, NgZone, Provider } from '@angular/core';
 import { Router } from '@angular/router';
-import { hostNavigationStarted } from './provide-host';
 
 export function provideRemote(options: {
   host: {
@@ -72,6 +71,8 @@ export async function activateWebComponentRouting(
     );
   }
 }
+
+export const hostNavigationStarted = 'x-host-navigation-start';
 
 async function handleHostNavigationStart(document: Document, router: Router) {
   document.addEventListener(hostNavigationStarted, async (event) => {

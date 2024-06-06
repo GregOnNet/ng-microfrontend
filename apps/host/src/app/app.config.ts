@@ -1,7 +1,7 @@
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 
-import { provideHost } from 'micro-frontend';
+import { provideHost } from './provide-host';
 import { routes } from './routes';
 
 export const appConfig: ApplicationConfig = {

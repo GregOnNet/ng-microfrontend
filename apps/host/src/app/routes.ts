@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { remotes } from '../remotes';
-import { HostComponent } from './host/host.component';
+import { HostComponent } from './host.component';
 import {
   RemoteFrameComponent,
   RemoteFrameConfiguration,

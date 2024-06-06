@@ -3,7 +3,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig, LOCALE_ID } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
-import { provideRemote } from 'micro-frontend';
+import { provideRemote } from './provide-remote';
 
 import { routes } from './routes';
 
