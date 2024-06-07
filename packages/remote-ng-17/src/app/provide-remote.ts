@@ -13,10 +13,9 @@ export function provideRemote(options: {
     useHashLocationStrategy: boolean;
   };
 }): Provider[] {
-  const sharedNgZoneProvider: Provider = {
-    provide: NgZone,
-    useValue: globalThis.ngZone,
-  };
+  const sharedNgZoneProvider: Provider = globalThis.ngZone
+    ? { provide: NgZone, useValue: globalThis.ngZone }
+    : [];
 
   const initializerProvider: Provider = {
     provide: APP_INITIALIZER,
